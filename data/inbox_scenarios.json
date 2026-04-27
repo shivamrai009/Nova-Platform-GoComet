@@ -1,0 +1,30 @@
+{
+  "scenarios": [
+    {
+      "scenario_id": "clean_shipment",
+      "label": "Incoming clean shipment",
+      "sender": "shipments@acme-supply.com",
+      "subject": "ACME shipment docs for shipment SHP-4472",
+      "body": "Please validate the attached invoice, bill of lading, and packing list before release to customer.",
+      "customer_id": "acme_imports",
+      "attachments": [
+        {"filename": "commercial_invoice_clean.txt", "path": "samples/clean/commercial_invoice_clean.txt"},
+        {"filename": "bill_of_lading_clean.txt", "path": "samples/clean/bill_of_lading_clean.txt"},
+        {"filename": "packing_list_clean.txt", "path": "samples/clean/packing_list_clean.txt"}
+      ]
+    },
+    {
+      "scenario_id": "messy_shipment",
+      "label": "Incoming messy shipment",
+      "sender": "shipments@acme-supply.com",
+      "subject": "ACME shipment docs - please correct before approval",
+      "body": "The supplier sent a noisy scan and the values may need amendments. Please review the attachments carefully.",
+      "customer_id": "acme_imports",
+      "attachments": [
+        {"filename": "commercial_invoice_messy.txt", "path": "samples/messy/commercial_invoice_messy.txt"},
+        {"filename": "bill_of_lading_clean.txt", "path": "samples/clean/bill_of_lading_clean.txt"},
+        {"filename": "packing_list_clean.txt", "path": "samples/clean/packing_list_clean.txt"}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nova | Trade Document Pipeline</title>
+    <link rel="stylesheet" href="/assets/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="hero">
+        <h1>Nova Trade Document Pipeline</h1>
+        <p>One screen for CG review: incoming email, verification, discrepancy detail, and editable draft reply.</p>
+      </header>
+
+      <section class="panel">
+        <h2>Incoming Email</h2>
+        <form id="ingestForm" class="stack-form">
+          <div class="form-grid">
+            <label>
+              From
+              <input name="sender" value="shipments@acme-supply.com" required />
+            </label>
+            <label>
+              Subject
+              <input name="subject" value="Shipment docs for SHP-9991" required />
+            </label>
+            <label>
+              Customer ID
+              <input name="customer_id" value="acme_imports" required />
+            </label>
+            <label class="full-width">
+              Body
+              <textarea name="body" rows="3" required>Please validate attached docs.</textarea>
+            </label>
+            <label class="full-width">
+              Attachments
+              <input name="files" type="file" multiple accept=".pdf,.png,.jpg,.jpeg,.webp,.txt,.md,.csv" required />
+            </label>
+          </div>
+          <div class="action-row">
+            <button type="submit">Process Email</button>
+            <button type="button" id="sampleCleanBtn" class="secondary">Load Clean Sample</button>
+            <button type="button" id="sampleMessyBtn" class="secondary">Load Messy Sample</button>
+          </div>
+        </form>
+        <p class="helper-note">Use the sample buttons for a fast demo, or upload your own trade document files.</p>
+        <pre id="status"></pre>
+        <div id="incomingState" class="state-card muted">Incoming state will appear here after you process or load a sample.</div>
+      </section>
+
+      <section class="panel">
+        <h2>Verification Result</h2>
+        <div class="section-head">
+          <span class="section-label">Decision</span>
+          <span id="decisionBadge" class="decision-pill muted">No run yet</span>
+        </div>
+        <div id="result"></div>
+      </section>
+
+      <section class="panel grid-2">
+        <div>
+          <h2>Discrepancy Detail</h2>
+          <div id="discrepancyDetail" class="state-card muted">Click a flagged field to inspect source evidence.</div>
+        </div>
+        <div>
+          <h2>Draft Reply</h2>
+          <p>The agent drafts the reply. CG reviews and edits before sending.</p>
+          <textarea id="draftReply" rows="14" spellcheck="false"></textarea>
+        </div>
+      </section>
+
+      <section class="panel">
+        <details>
+          <summary>Advanced: Stored Data Query</summary>
+          <p>Ask a question like "how many shipments were flagged this week?"</p>
+          <form id="queryForm" class="query-form">
+            <input id="question" placeholder="How many shipments were flagged this week?" required />
+            <button type="submit">Ask</button>
+          </form>
+          <pre id="queryResult"></pre>
+        </details>
+      </section>
+    </main>
+
+    <script src="/assets/app.js"></script>
+  </body>
+</html>

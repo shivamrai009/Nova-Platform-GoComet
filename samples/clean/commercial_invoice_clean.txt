@@ -1,0 +1,9 @@
+Commercial Invoice
+Invoice Number: INV-2026-00091
+Consignee Name: Acme Imports Pvt Ltd
+HS Code: 8471.50
+Port of Loading: Nhava Sheva, India
+Port of Discharge: Hamburg, Germany
+Incoterms: FOB
+Description of Goods: Industrial sensor modules for conveyor automation
+Gross Weight: 1250 kg

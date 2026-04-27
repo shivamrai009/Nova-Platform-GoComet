@@ -1,0 +1,9 @@
+COMMERCIAL INVOICE
+Invoice No.: INVOICE-91A
+consignee name : Acmee Imports Pvt. Ltd
+HS Code : 8517.62
+Port of Loading: Mundra
+Port of Discharge: Rotterdam
+Incoterms : CIF
+Description: Industrial sensr parts - mixed batch
+Gross Weight : 12.5OO kgs

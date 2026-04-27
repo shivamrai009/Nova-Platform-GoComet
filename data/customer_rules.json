@@ -1,0 +1,17 @@
+{
+  "customers": {
+    "acme_imports": {
+      "min_confidence": 0.7,
+      "field_rules": {
+        "consignee_name": {"type": "exact", "expected": "Acme Imports Pvt Ltd"},
+        "hs_code": {"type": "regex", "expected": "^8471"},
+        "port_of_loading": {"type": "contains", "expected": "Nhava Sheva"},
+        "port_of_discharge": {"type": "contains", "expected": "Hamburg"},
+        "incoterms": {"type": "exact", "expected": "FOB"},
+        "description_of_goods": {"type": "contains", "expected": "industrial sensor"},
+        "gross_weight": {"type": "regex", "expected": "^[0-9\\.,]+\\s*(kg|kgs|kilograms)$"},
+        "invoice_number": {"type": "regex", "expected": "^INV-"}
+      }
+    }
+  }
+}

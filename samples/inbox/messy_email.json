@@ -1,0 +1,12 @@
+{
+  "scenario_id": "messy_shipment",
+  "sender": "shipments@acme-supply.com",
+  "subject": "ACME shipment docs - please correct before approval",
+  "body": "The supplier sent a noisy scan and the values may need amendments. Please review the attachments carefully.",
+  "customer_id": "acme_imports",
+  "attachments": [
+    "samples/messy/commercial_invoice_messy.txt",
+    "samples/clean/bill_of_lading_clean.txt",
+    "samples/clean/packing_list_clean.txt"
+  ]
+}

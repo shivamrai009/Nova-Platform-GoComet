@@ -1,0 +1,8 @@
+Bill of Lading
+BOL Number: BOL-99812
+Consignee: Acme Imports Pvt Ltd
+HS Code: 8471.50
+Port of Loading: Nhava Sheva
+Port of Discharge: Hamburg
+Description of Goods: Industrial sensor modules for conveyor automation
+Gross Weight: 1250 kg
